@@ -2,6 +2,7 @@
 #include <math.h>
 #include <string>
 #include "MyForm1.h"
+#include "MyForm2.h"
 
 namespace wp_calculator_4105056005 {
 
@@ -13,7 +14,7 @@ namespace wp_calculator_4105056005 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// MyForm ªººK­n
+	/// MyForm çš„æ‘˜è¦
 	/// </summary>
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
@@ -22,13 +23,13 @@ namespace wp_calculator_4105056005 {
 		{
 			InitializeComponent();
 			//
-			//TODO:  ¦b¦¹¥[¤J«Øºc¨ç¦¡µ{¦¡½X
+			//TODO:  åœ¨æ­¤åŠ å…¥å»ºæ§‹å‡½å¼ç¨‹å¼ç¢¼
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// ²M°£¥ô¦ó¨Ï¥Î¤¤ªº¸ê·½¡C
+		/// æ¸…é™¤ä»»ä½•ä½¿ç”¨ä¸­çš„è³‡æºã€‚
 		/// </summary>
 		~MyForm()
 		{
@@ -77,8 +78,8 @@ namespace wp_calculator_4105056005 {
 	private: System::Windows::Forms::Label^  label1;
 	private: System::Windows::Forms::Label^  label2;
 	private: System::Windows::Forms::MenuStrip^  menuStrip1;
-	private: System::Windows::Forms::ToolStripMenuItem^  ¤Á´«¼Ò¦¡ToolStripMenuItem;
-	private: System::Windows::Forms::ToolStripMenuItem^  ÅªÀÉ­pºâ¾÷ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  åˆ‡æ›æ¨¡å¼ToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^  è®€æª”è¨ˆç®—æ©ŸToolStripMenuItem;
 
 
 	private: System::Windows::Forms::Button^  button38;
@@ -87,19 +88,31 @@ namespace wp_calculator_4105056005 {
 	private: System::Windows::Forms::Button^  button41;
 	private: System::Windows::Forms::Button^  button42;
 	private: System::Windows::Forms::Button^  button43;
+	private: System::Windows::Forms::Button^  button36;
+	private: System::Windows::Forms::Button^  button37;
+	private: System::Windows::Forms::Button^  button44;
+	private: System::Windows::Forms::Button^  button45;
+	private: System::Windows::Forms::Button^  button46;
+	private: System::Windows::Forms::Button^  button47;
+	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::ToolStripMenuItem^  è¼¸å…¥å¼è¨ˆç®—æ©ŸToolStripMenuItem;
+	private: System::Windows::Forms::Button^  button48;
+	private: System::Windows::Forms::Button^  button49;
+	private: System::Windows::Forms::TextBox^  textBox2;
+	private: System::Windows::Forms::ToolStripMenuItem^  ä½¿ç”¨èªªæ˜ToolStripMenuItem;
 
 
 
 	private:
 		/// <summary>
-		/// ³]­p¤u¨ã©Ò»İªºÅÜ¼Æ¡C
+		/// è¨­è¨ˆå·¥å…·æ‰€éœ€çš„è®Šæ•¸ã€‚
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// ¦¹¬°³]­p¤u¨ã¤ä´©©Ò»İªº¤èªk - ½Ğ¤Å¨Ï¥Îµ{¦¡½X½s¿è¾¹­×§ï
-		/// ³o­Ó¤èªkªº¤º®e¡C
+		/// æ­¤ç‚ºè¨­è¨ˆå·¥å…·æ”¯æ´æ‰€éœ€çš„æ–¹æ³• - è«‹å‹¿ä½¿ç”¨ç¨‹å¼ç¢¼ç·¨è¼¯å™¨ä¿®æ”¹
+		/// é€™å€‹æ–¹æ³•çš„å…§å®¹ã€‚
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -143,14 +156,26 @@ namespace wp_calculator_4105056005 {
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
-			this->¤Á´«¼Ò¦¡ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
-			this->ÅªÀÉ­pºâ¾÷ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->åˆ‡æ›æ¨¡å¼ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->è®€æª”è¨ˆç®—æ©ŸToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->è¼¸å…¥å¼è¨ˆç®—æ©ŸToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->ä½¿ç”¨èªªæ˜ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->button38 = (gcnew System::Windows::Forms::Button());
 			this->button39 = (gcnew System::Windows::Forms::Button());
 			this->button40 = (gcnew System::Windows::Forms::Button());
 			this->button41 = (gcnew System::Windows::Forms::Button());
 			this->button42 = (gcnew System::Windows::Forms::Button());
 			this->button43 = (gcnew System::Windows::Forms::Button());
+			this->button36 = (gcnew System::Windows::Forms::Button());
+			this->button37 = (gcnew System::Windows::Forms::Button());
+			this->button44 = (gcnew System::Windows::Forms::Button());
+			this->button45 = (gcnew System::Windows::Forms::Button());
+			this->button46 = (gcnew System::Windows::Forms::Button());
+			this->button47 = (gcnew System::Windows::Forms::Button());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->button48 = (gcnew System::Windows::Forms::Button());
+			this->button49 = (gcnew System::Windows::Forms::Button());
+			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -345,7 +370,7 @@ namespace wp_calculator_4105056005 {
 			this->button13->Name = L"button13";
 			this->button13->Size = System::Drawing::Size(130, 85);
 			this->button13->TabIndex = 12;
-			this->button13->Text = L"¡Ñ";
+			this->button13->Text = L"Ã—";
 			this->button13->UseVisualStyleBackColor = false;
 			this->button13->Click += gcnew System::EventHandler(this, &MyForm::button13_Click);
 			// 
@@ -360,7 +385,7 @@ namespace wp_calculator_4105056005 {
 			this->button14->Name = L"button14";
 			this->button14->Size = System::Drawing::Size(130, 85);
 			this->button14->TabIndex = 13;
-			this->button14->Text = L"¡Ò";
+			this->button14->Text = L"Ã·";
 			this->button14->UseVisualStyleBackColor = false;
 			this->button14->Click += gcnew System::EventHandler(this, &MyForm::button14_Click);
 			// 
@@ -450,7 +475,7 @@ namespace wp_calculator_4105056005 {
 			this->button20->Name = L"button20";
 			this->button20->Size = System::Drawing::Size(130, 85);
 			this->button20->TabIndex = 19;
-			this->button20->Text = L"£k";
+			this->button20->Text = L"Ï€";
 			this->button20->UseVisualStyleBackColor = false;
 			this->button20->Click += gcnew System::EventHandler(this, &MyForm::button20_Click);
 			// 
@@ -540,7 +565,7 @@ namespace wp_calculator_4105056005 {
 			this->button26->Name = L"button26";
 			this->button26->Size = System::Drawing::Size(130, 85);
 			this->button26->TabIndex = 25;
-			this->button26->Text = L"¡Ô";
+			this->button26->Text = L"âˆš";
 			this->button26->UseVisualStyleBackColor = false;
 			this->button26->Click += gcnew System::EventHandler(this, &MyForm::button26_Click);
 			// 
@@ -615,7 +640,7 @@ namespace wp_calculator_4105056005 {
 			this->button31->Name = L"button31";
 			this->button31->Size = System::Drawing::Size(130, 85);
 			this->button31->TabIndex = 30;
-			this->button31->Text = L"¡Ó";
+			this->button31->Text = L"Â±";
 			this->button31->UseVisualStyleBackColor = false;
 			this->button31->Click += gcnew System::EventHandler(this, &MyForm::button31_Click);
 			// 
@@ -660,7 +685,7 @@ namespace wp_calculator_4105056005 {
 			this->button34->Name = L"button34";
 			this->button34->Size = System::Drawing::Size(130, 85);
 			this->button34->TabIndex = 33;
-			this->button34->Text = L"¡ö";
+			this->button34->Text = L"â†";
 			this->button34->UseVisualStyleBackColor = false;
 			this->button34->Click += gcnew System::EventHandler(this, &MyForm::button34_Click);
 			// 
@@ -675,7 +700,7 @@ namespace wp_calculator_4105056005 {
 			this->button35->Name = L"button35";
 			this->button35->Size = System::Drawing::Size(130, 85);
 			this->button35->TabIndex = 34;
-			this->button35->Text = L"¡ô";
+			this->button35->Text = L"â†‘";
 			this->button35->UseVisualStyleBackColor = false;
 			this->button35->Click += gcnew System::EventHandler(this, &MyForm::button35_Click);
 			// 
@@ -684,7 +709,7 @@ namespace wp_calculator_4105056005 {
 			this->textBox1->BackColor = System::Drawing::SystemColors::ButtonHighlight;
 			this->textBox1->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 24, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
-			this->textBox1->Location = System::Drawing::Point(12, 217);
+			this->textBox1->Location = System::Drawing::Point(14, 188);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->ReadOnly = true;
 			this->textBox1->Size = System::Drawing::Size(675, 89);
@@ -697,21 +722,22 @@ namespace wp_calculator_4105056005 {
 			this->label1->AutoSize = true;
 			this->label1->BackColor = System::Drawing::Color::Transparent;
 			this->label1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->label1->Font = (gcnew System::Drawing::Font(L"·L³n¥¿¶ÂÅé", 16.125F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+			this->label1->Font = (gcnew System::Drawing::Font(L"å¾®è»Ÿæ­£é»‘é«”", 16.125F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->label1->ForeColor = System::Drawing::SystemColors::ControlLightLight;
-			this->label1->Location = System::Drawing::Point(32, 70);
+			this->label1->Location = System::Drawing::Point(20, 56);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(110, 55);
 			this->label1->TabIndex = 36;
-			this->label1->Text = L"¤uµ{";
+			this->label1->Text = L"å·¥ç¨‹";
 			// 
 			// label2
 			// 
+			this->label2->AutoEllipsis = true;
 			this->label2->BackColor = System::Drawing::Color::WhiteSmoke;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Bahnschrift", 16.125F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->label2->Location = System::Drawing::Point(15, 134);
+			this->label2->Location = System::Drawing::Point(15, 118);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(674, 54);
 			this->label2->TabIndex = 37;
@@ -721,26 +747,46 @@ namespace wp_calculator_4105056005 {
 			// 
 			this->menuStrip1->BackColor = System::Drawing::Color::LightSteelBlue;
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(32, 32);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->¤Á´«¼Ò¦¡ToolStripMenuItem });
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->åˆ‡æ›æ¨¡å¼ToolStripMenuItem,
+					this->ä½¿ç”¨èªªæ˜ToolStripMenuItem
+			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Size = System::Drawing::Size(701, 38);
 			this->menuStrip1->TabIndex = 38;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
-			// ¤Á´«¼Ò¦¡ToolStripMenuItem
+			// åˆ‡æ›æ¨¡å¼ToolStripMenuItem
 			// 
-			this->¤Á´«¼Ò¦¡ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->ÅªÀÉ­pºâ¾÷ToolStripMenuItem });
-			this->¤Á´«¼Ò¦¡ToolStripMenuItem->Name = L"¤Á´«¼Ò¦¡ToolStripMenuItem";
-			this->¤Á´«¼Ò¦¡ToolStripMenuItem->Size = System::Drawing::Size(121, 34);
-			this->¤Á´«¼Ò¦¡ToolStripMenuItem->Text = L"¤Á´«¼Ò¦¡";
+			this->åˆ‡æ›æ¨¡å¼ToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->è®€æª”è¨ˆç®—æ©ŸToolStripMenuItem,
+					this->è¼¸å…¥å¼è¨ˆç®—æ©ŸToolStripMenuItem
+			});
+			this->åˆ‡æ›æ¨¡å¼ToolStripMenuItem->Name = L"åˆ‡æ›æ¨¡å¼ToolStripMenuItem";
+			this->åˆ‡æ›æ¨¡å¼ToolStripMenuItem->Size = System::Drawing::Size(121, 34);
+			this->åˆ‡æ›æ¨¡å¼ToolStripMenuItem->Text = L"åˆ‡æ›æ¨¡å¼";
 			// 
-			// ÅªÀÉ­pºâ¾÷ToolStripMenuItem
+			// è®€æª”è¨ˆç®—æ©ŸToolStripMenuItem
 			// 
-			this->ÅªÀÉ­pºâ¾÷ToolStripMenuItem->Name = L"ÅªÀÉ­pºâ¾÷ToolStripMenuItem";
-			this->ÅªÀÉ­pºâ¾÷ToolStripMenuItem->Size = System::Drawing::Size(230, 38);
-			this->ÅªÀÉ­pºâ¾÷ToolStripMenuItem->Text = L"ÅªÀÉ­pºâ¾÷";
-			this->ÅªÀÉ­pºâ¾÷ToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ÅªÀÉ­pºâ¾÷ToolStripMenuItem_Click);
+			this->è®€æª”è¨ˆç®—æ©ŸToolStripMenuItem->Name = L"è®€æª”è¨ˆç®—æ©ŸToolStripMenuItem";
+			this->è®€æª”è¨ˆç®—æ©ŸToolStripMenuItem->Size = System::Drawing::Size(254, 38);
+			this->è®€æª”è¨ˆç®—æ©ŸToolStripMenuItem->Text = L"è®€æª”è¨ˆç®—æ©Ÿ";
+			this->è®€æª”è¨ˆç®—æ©ŸToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::è®€æª”è¨ˆç®—æ©ŸToolStripMenuItem_Click);
+			// 
+			// è¼¸å…¥å¼è¨ˆç®—æ©ŸToolStripMenuItem
+			// 
+			this->è¼¸å…¥å¼è¨ˆç®—æ©ŸToolStripMenuItem->Name = L"è¼¸å…¥å¼è¨ˆç®—æ©ŸToolStripMenuItem";
+			this->è¼¸å…¥å¼è¨ˆç®—æ©ŸToolStripMenuItem->Size = System::Drawing::Size(254, 38);
+			this->è¼¸å…¥å¼è¨ˆç®—æ©ŸToolStripMenuItem->Text = L"è¼¸å…¥å¼è¨ˆç®—æ©Ÿ";
+			this->è¼¸å…¥å¼è¨ˆç®—æ©ŸToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::è¼¸å…¥å¼è¨ˆç®—æ©ŸToolStripMenuItem_Click);
+			// 
+			// ä½¿ç”¨èªªæ˜ToolStripMenuItem
+			// 
+			this->ä½¿ç”¨èªªæ˜ToolStripMenuItem->Name = L"ä½¿ç”¨èªªæ˜ToolStripMenuItem";
+			this->ä½¿ç”¨èªªæ˜ToolStripMenuItem->Size = System::Drawing::Size(121, 34);
+			this->ä½¿ç”¨èªªæ˜ToolStripMenuItem->Text = L"ä½¿ç”¨èªªæ˜";
+			this->ä½¿ç”¨èªªæ˜ToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::ä½¿ç”¨èªªæ˜ToolStripMenuItem_Click);
 			// 
 			// button38
 			// 
@@ -838,6 +884,139 @@ namespace wp_calculator_4105056005 {
 			this->button43->Visible = false;
 			this->button43->Click += gcnew System::EventHandler(this, &MyForm::button43_Click);
 			// 
+			// button36
+			// 
+			this->button36->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->button36->Font = (gcnew System::Drawing::Font(L"Bahnschrift Condensed", 10.125F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button36->Location = System::Drawing::Point(14, 298);
+			this->button36->Name = L"button36";
+			this->button36->Size = System::Drawing::Size(113, 61);
+			this->button36->TabIndex = 47;
+			this->button36->Text = L"MC";
+			this->button36->UseVisualStyleBackColor = false;
+			this->button36->Click += gcnew System::EventHandler(this, &MyForm::button36_Click);
+			// 
+			// button37
+			// 
+			this->button37->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->button37->Font = (gcnew System::Drawing::Font(L"Bahnschrift Condensed", 10.125F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button37->Location = System::Drawing::Point(132, 299);
+			this->button37->Name = L"button37";
+			this->button37->Size = System::Drawing::Size(113, 61);
+			this->button37->TabIndex = 48;
+			this->button37->Text = L"MR";
+			this->button37->UseVisualStyleBackColor = false;
+			this->button37->Click += gcnew System::EventHandler(this, &MyForm::button37_Click);
+			// 
+			// button44
+			// 
+			this->button44->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->button44->Font = (gcnew System::Drawing::Font(L"Bahnschrift Condensed", 10.125F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button44->Location = System::Drawing::Point(252, 299);
+			this->button44->Name = L"button44";
+			this->button44->Size = System::Drawing::Size(113, 61);
+			this->button44->TabIndex = 49;
+			this->button44->Text = L"M+";
+			this->button44->UseVisualStyleBackColor = false;
+			this->button44->Click += gcnew System::EventHandler(this, &MyForm::button44_Click);
+			// 
+			// button45
+			// 
+			this->button45->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->button45->Font = (gcnew System::Drawing::Font(L"Bahnschrift Condensed", 10.125F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button45->Location = System::Drawing::Point(371, 300);
+			this->button45->Name = L"button45";
+			this->button45->Size = System::Drawing::Size(113, 61);
+			this->button45->TabIndex = 50;
+			this->button45->Text = L"M-";
+			this->button45->UseVisualStyleBackColor = false;
+			this->button45->Click += gcnew System::EventHandler(this, &MyForm::button45_Click);
+			// 
+			// button46
+			// 
+			this->button46->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->button46->Font = (gcnew System::Drawing::Font(L"Bahnschrift Condensed", 10.125F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button46->Location = System::Drawing::Point(490, 300);
+			this->button46->Name = L"button46";
+			this->button46->Size = System::Drawing::Size(113, 61);
+			this->button46->TabIndex = 51;
+			this->button46->Text = L"MS";
+			this->button46->UseVisualStyleBackColor = false;
+			this->button46->Click += gcnew System::EventHandler(this, &MyForm::button46_Click);
+			// 
+			// button47
+			// 
+			this->button47->BackColor = System::Drawing::SystemColors::ActiveBorder;
+			this->button47->Font = (gcnew System::Drawing::Font(L"Bahnschrift Condensed", 10.125F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button47->Location = System::Drawing::Point(609, 301);
+			this->button47->Name = L"button47";
+			this->button47->Size = System::Drawing::Size(78, 61);
+			this->button47->TabIndex = 52;
+			this->button47->Text = L"M^";
+			this->button47->UseVisualStyleBackColor = false;
+			this->button47->Click += gcnew System::EventHandler(this, &MyForm::button47_Click);
+			// 
+			// label3
+			// 
+			this->label3->Dock = System::Windows::Forms::DockStyle::Bottom;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiCondensed", 13.875F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->Location = System::Drawing::Point(0, 726);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(701, 282);
+			this->label3->TabIndex = 53;
+			this->label3->TextAlign = System::Drawing::ContentAlignment::TopRight;
+			this->label3->Visible = false;
+			// 
+			// button48
+			// 
+			this->button48->BackColor = System::Drawing::Color::Gainsboro;
+			this->button48->BackgroundImageLayout = System::Windows::Forms::ImageLayout::None;
+			this->button48->FlatAppearance->BorderSize = 0;
+			this->button48->Font = (gcnew System::Drawing::Font(L"Microsoft JhengHei UI", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(136)));
+			this->button48->Location = System::Drawing::Point(14, 365);
+			this->button48->Name = L"button48";
+			this->button48->Size = System::Drawing::Size(130, 85);
+			this->button48->TabIndex = 54;
+			this->button48->Text = L" x^3";
+			this->button48->UseVisualStyleBackColor = false;
+			this->button48->Visible = false;
+			this->button48->Click += gcnew System::EventHandler(this, &MyForm::button48_Click);
+			// 
+			// button49
+			// 
+			this->button49->BackColor = System::Drawing::Color::Plum;
+			this->button49->FlatAppearance->BorderSize = 0;
+			this->button49->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
+			this->button49->Font = (gcnew System::Drawing::Font(L"å¾®è»Ÿæ­£é»‘é«”", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(136)));
+			this->button49->Location = System::Drawing::Point(541, 59);
+			this->button49->Name = L"button49";
+			this->button49->Size = System::Drawing::Size(144, 49);
+			this->button49->TabIndex = 55;
+			this->button49->Text = L"æ­·å²ç´€éŒ„";
+			this->button49->UseVisualStyleBackColor = false;
+			this->button49->Click += gcnew System::EventHandler(this, &MyForm::button49_Click);
+			// 
+			// textBox2
+			// 
+			this->textBox2->Font = (gcnew System::Drawing::Font(L"Bahnschrift SemiCondensed", 13.875F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->textBox2->Location = System::Drawing::Point(0, 114);
+			this->textBox2->Multiline = true;
+			this->textBox2->Name = L"textBox2";
+			this->textBox2->ScrollBars = System::Windows::Forms::ScrollBars::Both;
+			this->textBox2->Size = System::Drawing::Size(701, 533);
+			this->textBox2->TabIndex = 56;
+			this->textBox2->Visible = false;
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(13, 24);
@@ -846,6 +1025,16 @@ namespace wp_calculator_4105056005 {
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(701, 1008);
+			this->Controls->Add(this->textBox2);
+			this->Controls->Add(this->button49);
+			this->Controls->Add(this->button48);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->button47);
+			this->Controls->Add(this->button46);
+			this->Controls->Add(this->button45);
+			this->Controls->Add(this->button44);
+			this->Controls->Add(this->button37);
+			this->Controls->Add(this->button36);
 			this->Controls->Add(this->button43);
 			this->Controls->Add(this->button42);
 			this->Controls->Add(this->button41);
@@ -896,7 +1085,7 @@ namespace wp_calculator_4105056005 {
 			this->Name = L"MyForm";
 			this->ShowIcon = false;
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"­pºâ¾÷";
+			this->Text = L"è¨ˆç®—æ©Ÿ";
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
@@ -904,7 +1093,7 @@ namespace wp_calculator_4105056005 {
 
 		}
 
-		//ÅÜ¼Æ¨Ï¥Î
+		//è®Šæ•¸ä½¿ç”¨
 		Boolean operation_press = false;
 		Boolean check_error = false;
 		Boolean equal = false;
@@ -997,17 +1186,17 @@ private: System::Void button20_Click(System::Object^  sender, System::EventArgs^
 	else
 		textBox1->Text += "3.141592";
 }
-//CE ®ø°£¥Ø«e¼Æ¦r
+//CE æ¶ˆé™¤ç›®å‰æ•¸å­—
 private: System::Void button33_Click(System::Object^  sender, System::EventArgs^  e) {
 	if(textBox1->Text != "")
 		textBox1->Text = "0";
 }
-//C ®ø°£©Ò¦³ºâ¦¡
+//C æ¶ˆé™¤æ‰€æœ‰ç®—å¼
 private: System::Void button32_Click(System::Object^  sender, System::EventArgs^  e) {
 	textBox1->Text = "0";
 	label2->Text = "";
 }
-//¥[ªk²Å¸¹
+//åŠ æ³•ç¬¦è™Ÿ
 private: System::Void button11_Click(System::Object^  sender, System::EventArgs^  e) {
 	if(operation_press == 0 || equal == 1)
 		label2->Text += textBox1->Text + "+";
@@ -1021,7 +1210,7 @@ private: System::Void button11_Click(System::Object^  sender, System::EventArgs^
 	operation_press = 1;
 	equal = 0;
 }
-//´îªk²Å¸¹
+//æ¸›æ³•ç¬¦è™Ÿ
 private: System::Void button12_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (operation_press == 0 || equal == 1)
 		label2->Text += textBox1->Text + "-";
@@ -1035,7 +1224,7 @@ private: System::Void button12_Click(System::Object^  sender, System::EventArgs^
 	operation_press = 1;
 	equal = 0;
 }
-//­¼ªk²Å¸¹
+//ä¹˜æ³•ç¬¦è™Ÿ
 private: System::Void button13_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (operation_press == 0 || equal == 1)
 		label2->Text += textBox1->Text + "*";
@@ -1049,12 +1238,12 @@ private: System::Void button13_Click(System::Object^  sender, System::EventArgs^
 	operation_press = 1;
 	equal = 0;
 }
-//°£ªk²Å¸¹
+//é™¤æ³•ç¬¦è™Ÿ
 private: System::Void button14_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (operation_press == 0 || equal == 1)
 		label2->Text += textBox1->Text + "/";
-	else if (operation_press == 1 && label2->Text != "") { //¤Á´«¥[´î­¼°£²Å¸¹
-		if (label2->Text[label2->Text->Length - 1] == 'd') //§PÂ_«e­±¬O¤£¬Omod
+	else if (operation_press == 1 && label2->Text != "") { //åˆ‡æ›åŠ æ¸›ä¹˜é™¤ç¬¦è™Ÿ
+		if (label2->Text[label2->Text->Length - 1] == 'd') //åˆ¤æ–·å‰é¢æ˜¯ä¸æ˜¯mod
 			label2->Text = label2->Text->Remove(label2->Text->Length - 3);
 		else if (label2->Text[label2->Text->Length - 1] != ')')
 			label2->Text = label2->Text->Remove(label2->Text->Length - 1);
@@ -1063,27 +1252,27 @@ private: System::Void button14_Click(System::Object^  sender, System::EventArgs^
 	operation_press = 1;
 	equal = 0;
 }
-//¤p¼ÆÂI
+//å°æ•¸é»
 private: System::Void button16_Click(System::Object^  sender, System::EventArgs^  e) {
 	textBox1->Text +=".";
 }
-//¥ª¬A¸¹
+//å·¦æ‹¬è™Ÿ
 private: System::Void button17_Click(System::Object^  sender, System::EventArgs^  e) {
 	label2->Text += "(";
 }
-//¥k¬A¸¹
+//å³æ‹¬è™Ÿ
 private: System::Void button18_Click(System::Object^  sender, System::EventArgs^  e) {
 	label2->Text += textBox1->Text + ")";
 	textBox1->Text = "";
 }
-//¶¥­¼
+//éšä¹˜
 private: System::Void button19_Click(System::Object^  sender, System::EventArgs^  e) {
 	int lastPos = label2->Text->LastIndexOf(")");
 	int len = label2->Text->Length;
 	int temp = 0;
-	if (lastPos == -1 || label2->Text[len - 1] != ')')	//¨S¦³¬A¸¹
+	if (lastPos == -1 || label2->Text[len - 1] != ')')	//æ²’æœ‰æ‹¬è™Ÿ
 		label2->Text += "fact(" + textBox1->Text + ")";
-	else {			//§âfact´¡¤J¥ª¬A¸¹¥ªÃä
+	else {			//æŠŠfactæ’å…¥å·¦æ‹¬è™Ÿå·¦é‚Š
 		for (int i = (len - 1); i >= 0; i--) {
 			if (label2->Text[i] == ')')
 				temp++;
@@ -1107,14 +1296,21 @@ private: System::Void button19_Click(System::Object^  sender, System::EventArgs^
 	operation_press = 0;
 	equal = 0;
 }
-//¤G¦¸¤è
+//äºŒæ¬¡æ–¹
 private: System::Void button21_Click(System::Object^  sender, System::EventArgs^  e) {
 	label2->Text += textBox1->Text + "^";
 	textBox1->Text = "2";
-	operation_press = 1;
+	operation_press = 0;
 	equal = 0;
 }
-//¦¸¤è
+//ä¸‰æ¬¡æ–¹
+private: System::Void button48_Click(System::Object^  sender, System::EventArgs^  e) {
+	label2->Text += textBox1->Text + "^";
+	textBox1->Text = "3";
+	operation_press = 0;
+	equal = 0;
+}
+//æ¬¡æ–¹
 private: System::Void button22_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (operation_press == 0 || equal == 1)
 		label2->Text += textBox1->Text + "^";
@@ -1128,14 +1324,14 @@ private: System::Void button22_Click(System::Object^  sender, System::EventArgs^
 	operation_press = 1;
 	equal = 0;
 }
-//sin¡A·|§ä¨ì¾a¥kªº¥ª¬A¸¹¨Ã¥]¦í¥¦¡A­Y¨S¦³¥ª¬A¸¹«h©ñ¦b³Ì«á;¹J¨ì¨ä¥L¯S®í¹Bºâ·|¥]¦í¥¦
+//sinï¼Œæœƒæ‰¾åˆ°é å³çš„å·¦æ‹¬è™Ÿä¸¦åŒ…ä½å®ƒï¼Œè‹¥æ²’æœ‰å·¦æ‹¬è™Ÿå‰‡æ”¾åœ¨æœ€å¾Œ;é‡åˆ°å…¶ä»–ç‰¹æ®Šé‹ç®—æœƒåŒ…ä½å®ƒ
 private: System::Void button23_Click(System::Object^  sender, System::EventArgs^  e) {
 	int lastPos = label2->Text->LastIndexOf(")");
 	int len = label2->Text->Length;
 	int temp = 0;
-	if (lastPos == -1 || label2->Text[len-1] != ')')	//¨S¦³¬A¸¹
+	if (lastPos == -1 || label2->Text[len-1] != ')')	//æ²’æœ‰æ‹¬è™Ÿ
 		label2->Text += "sin(" + textBox1->Text + ")";
-	else {			//§âsin´¡¤J¥ª¬A¸¹¥ªÃä
+	else {			//æŠŠsinæ’å…¥å·¦æ‹¬è™Ÿå·¦é‚Š
 		for (int i = (len - 1); i >= 0; i--) {
 			if (label2->Text[i] == ')')
 				temp++;
@@ -1164,9 +1360,9 @@ private: System::Void button24_Click(System::Object^  sender, System::EventArgs^
 	int lastPos = label2->Text->LastIndexOf(")");
 	int len = label2->Text->Length;
 	int temp = 0;
-	if (lastPos == -1 || label2->Text[len - 1] != ')')	//¨S¦³¬A¸¹
+	if (lastPos == -1 || label2->Text[len - 1] != ')')	//æ²’æœ‰æ‹¬è™Ÿ
 		label2->Text += "cos(" + textBox1->Text + ")";
-	else {			//§âcos´¡¤J¥ª¬A¸¹¥ªÃä
+	else {			//æŠŠcosæ’å…¥å·¦æ‹¬è™Ÿå·¦é‚Š
 		for (int i = (len - 1); i >= 0; i--) {
 			if (label2->Text[i] == ')')
 				temp++;
@@ -1195,9 +1391,9 @@ private: System::Void button25_Click(System::Object^  sender, System::EventArgs^
 	int lastPos = label2->Text->LastIndexOf(")");
 	int len = label2->Text->Length;
 	int temp = 0;
-	if (lastPos == -1 || label2->Text[len - 1] != ')')	//¨S¦³¬A¸¹
+	if (lastPos == -1 || label2->Text[len - 1] != ')')	//æ²’æœ‰æ‹¬è™Ÿ
 		label2->Text += "tan(" + textBox1->Text + ")";
-	else {			//§âtan´¡¤J¥ª¬A¸¹¥ªÃä
+	else {			//æŠŠtanæ’å…¥å·¦æ‹¬è™Ÿå·¦é‚Š
 		for (int i = (len - 1); i >= 0; i--) {
 			if (label2->Text[i] == ')')
 				temp++;
@@ -1221,14 +1417,14 @@ private: System::Void button25_Click(System::Object^  sender, System::EventArgs^
 	operation_press = 0;
 	equal = 0;
 }
-//¶}®Ú¸¹
+//é–‹æ ¹è™Ÿ
 private: System::Void button26_Click(System::Object^  sender, System::EventArgs^  e) {
 	int lastPos = label2->Text->LastIndexOf(")");
 	int len = label2->Text->Length;
 	int temp = 0;
-	if (lastPos == -1 || label2->Text[len - 1] != ')')	//¨S¦³¬A¸¹
+	if (lastPos == -1 || label2->Text[len - 1] != ')')	//æ²’æœ‰æ‹¬è™Ÿ
 		label2->Text += "sqrt(" + textBox1->Text + ")";
-	else {			//§âsqrt´¡¤J¥ª¬A¸¹¥ªÃä
+	else {			//æŠŠsqrtæ’å…¥å·¦æ‹¬è™Ÿå·¦é‚Š
 		for (int i = (len - 1); i >= 0; i--) {
 			if (label2->Text[i] == ')')
 				temp++;
@@ -1257,9 +1453,9 @@ private: System::Void button27_Click(System::Object^  sender, System::EventArgs^
 	int lastPos = label2->Text->LastIndexOf(")");
 	int len = label2->Text->Length;
 	int temp = 0;
-	if (lastPos == -1 || label2->Text[len - 1] != ')')	//¨S¦³¬A¸¹
+	if (lastPos == -1 || label2->Text[len - 1] != ')')	//æ²’æœ‰æ‹¬è™Ÿ
 		label2->Text += "10^(" + textBox1->Text + ")";
-	else {			//§â10^´¡¤J¥ª¬A¸¹¥ªÃä
+	else {			//æŠŠ10^æ’å…¥å·¦æ‹¬è™Ÿå·¦é‚Š
 		for (int i = (len - 1); i >= 0; i--) {
 			if (label2->Text[i] == ')')
 				temp++;
@@ -1288,9 +1484,9 @@ private: System::Void button28_Click(System::Object^  sender, System::EventArgs^
 	int lastPos = label2->Text->LastIndexOf(")");
 	int len = label2->Text->Length;
 	int temp = 0;
-	if (lastPos == -1 || label2->Text[len - 1] != ')')	//¨S¦³¬A¸¹
+	if (lastPos == -1 || label2->Text[len - 1] != ')')	//æ²’æœ‰æ‹¬è™Ÿ
 		label2->Text += "log(" + textBox1->Text + ")";
-	else {			//§âlog´¡¤J¥ª¬A¸¹¥ªÃä
+	else {			//æŠŠlogæ’å…¥å·¦æ‹¬è™Ÿå·¦é‚Š
 		for (int i = (len - 1); i >= 0; i--) {
 			if (label2->Text[i] == ')')
 				temp++;
@@ -1314,7 +1510,7 @@ private: System::Void button28_Click(System::Object^  sender, System::EventArgs^
 	operation_press = 0;
 	equal = 0;
 }
-//Exp¡A¼Æ¦r.e+¼Æ¦r
+//Expï¼Œæ•¸å­—.e+æ•¸å­—
 private: System::Void button29_Click(System::Object^  sender, System::EventArgs^  e) {
 	label2->Text += textBox1->Text + "*(10^";
 	textBox1->Text += ".e+";
@@ -1335,18 +1531,19 @@ private: System::Void button30_Click(System::Object^  sender, System::EventArgs^
 	operation_press = 1;
 	equal = 0;
 }
-//µ¥©ó
+//ç­‰æ–¼
 private: System::Void button15_Click(System::Object^  sender, System::EventArgs^  e) {
 	label2->Text += textBox1->Text + "=";
 	textBox1->Text = "" + expr(label2->Text);
 	if (check_error == true)
 		textBox1->Text = "Error";
+	textBox2->Text += label2->Text + textBox1->Text + "\r\n";
 	label2->Text = "";
 	operation_press = 1;
 	equal = 1;
 	check_error = false;
 }
-//¹Bºâ:expr
+//é‹ç®—:expr
 private: System::Double expr(String^ str) {
 	double value = 0.0;
 	int index = 0;
@@ -1367,12 +1564,12 @@ private: System::Double expr(String^ str) {
 				value -= term(str, index);
 			break;
 		default:
-			textBox1->Text = "Error";
-			break;
+			check_error = 1;
+			return 0;
 		}
 	}
 }
-//¹Bºâ:term
+//é‹ç®—:term
 private: System::Double term(String^ str, int& index) {
 	Double value = 0.0;
 	value = number(str, index);
@@ -1415,7 +1612,7 @@ private: System::Double term(String^ str, int& index) {
 	}
 	return value;
 }
-//¹Bºâ:number
+//é‹ç®—:number
 private: System::Double number(String^ str, int& index) {
 	Double value = 0.0;
 
@@ -1437,6 +1634,11 @@ private: System::Double number(String^ str, int& index) {
 			(index) += 4;
 			psubstr = extract(str, index);
 			value = expr(psubstr);
+			if (psubstr == nullptr) {
+				index--;
+				check_error = true;
+				return 0;
+			}
 			value = sin(value);
 			return value;
 		}
@@ -1493,7 +1695,7 @@ private: System::Double number(String^ str, int& index) {
 		value = tan(value);
 		return value;
 	}
-	//exp«ü¼Æ
+	//expæŒ‡æ•¸
 	else if (str[index] == 'e' && str[index + 1] == 'x' && str[index + 2] == 'p' && str[index + 3] == '(') {
 		String^ psubstr = nullptr;
 		index += 4;
@@ -1537,7 +1739,7 @@ private: System::Double number(String^ str, int& index) {
 			return 0;
 		}
 	}
-	//neg­t¸¹
+	//negè² è™Ÿ
 	else if (str[index] == 'n' && str[index + 1] == 'e' && str[index + 2] == 'g' && str[index + 3] == '(') {
 		String^ psubstr = nullptr;
 		index += 4;
@@ -1545,6 +1747,10 @@ private: System::Double number(String^ str, int& index) {
 		value = expr(psubstr);
 		value = -(value);
 		return value;
+	}
+	else if (str[index] == '=') {
+		check_error = 1;
+		return 0;
 	}
 	while (Char::IsDigit(str[index]))
 		value = 10 * value + (str[index++] - '0');
@@ -1559,7 +1765,7 @@ private: System::Double number(String^ str, int& index) {
 	}
 	return value;
 }
-//¹Bºâ:extract
+//é‹ç®—:extract
 private: System::String^ extract(String^ str, int& index) {
 	char buffer[80] = { '0' };
 	String^ pstr;
@@ -1590,8 +1796,9 @@ private: System::String^ extract(String^ str, int& index) {
 		bufindex++;
 	} while (str[index++] != '='); // Loop - don't overrun end of string
 	check_error = true;
+	return pstr;
 }
-//delete«ö¶s
+//deleteæŒ‰éˆ•
 private: System::Void button34_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (textBox1->Text != "0" && operation_press == 0) {
 		if (textBox1->Text->Length == 1)
@@ -1601,7 +1808,7 @@ private: System::Void button34_Click(System::Object^  sender, System::EventArgs^
 		}
 	}
 }
-//¥¿­t¸¹Âà´«
+//æ­£è² è™Ÿè½‰æ›
 private: System::Void button31_Click(System::Object^  sender, System::EventArgs^  e) {
 	if (textBox1->Text != "") {
 		if (textBox1->Text[0] == '-')
@@ -1639,12 +1846,13 @@ private: System::Double factorial(double value) {
 	}
 	return f;
 }
-private: System::Void ÅªÀÉ­pºâ¾÷ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+private: System::Void è®€æª”è¨ˆç®—æ©ŸToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
 	MyForm1^ f2 = gcnew MyForm1();
 	f2->ShowDialog();
 }
-//¤Á´«¤W±Æ­±ªO
+//åˆ‡æ›ä¸Šæ’é¢æ¿
 private: System::Void button35_Click(System::Object^  sender, System::EventArgs^  e) {
+	button21->Visible = !button21->Visible;
 	button23->Visible = !button23->Visible;
 	button24->Visible = !button24->Visible;
 	button25->Visible = !button25->Visible;
@@ -1658,15 +1866,16 @@ private: System::Void button35_Click(System::Object^  sender, System::EventArgs^
 	button41->Visible = !button41->Visible;
 	button42->Visible = !button42->Visible;
 	button43->Visible = !button43->Visible;
+	button48->Visible = !button48->Visible;
 }
 //csc
 private: System::Void button38_Click(System::Object^  sender, System::EventArgs^  e) {
 	int lastPos = label2->Text->LastIndexOf(")");
 	int len = label2->Text->Length;
 	int temp = 0;
-	if (lastPos == -1 || label2->Text[len - 1] != ')')	//¨S¦³¬A¸¹
+	if (lastPos == -1 || label2->Text[len - 1] != ')')	//æ²’æœ‰æ‹¬è™Ÿ
 		label2->Text += "csc(" + textBox1->Text + ")";
-	else {			//§âcsc´¡¤J¥ª¬A¸¹¥ªÃä
+	else {			//æŠŠcscæ’å…¥å·¦æ‹¬è™Ÿå·¦é‚Š
 		for (int i = (len - 1); i >= 0; i--) {
 			if (label2->Text[i] == ')')
 				temp++;
@@ -1695,9 +1904,9 @@ private: System::Void button39_Click(System::Object^  sender, System::EventArgs^
 	int lastPos = label2->Text->LastIndexOf(")");
 	int len = label2->Text->Length;
 	int temp = 0;
-	if (lastPos == -1 || label2->Text[len - 1] != ')')	//¨S¦³¬A¸¹
+	if (lastPos == -1 || label2->Text[len - 1] != ')')	//æ²’æœ‰æ‹¬è™Ÿ
 		label2->Text += "sec(" + textBox1->Text + ")";
-	else {			//§âsec´¡¤J¥ª¬A¸¹¥ªÃä
+	else {			//æŠŠsecæ’å…¥å·¦æ‹¬è™Ÿå·¦é‚Š
 		for (int i = (len - 1); i >= 0; i--) {
 			if (label2->Text[i] == ')')
 				temp++;
@@ -1726,9 +1935,9 @@ private: System::Void button40_Click(System::Object^  sender, System::EventArgs^
 	int lastPos = label2->Text->LastIndexOf(")");
 	int len = label2->Text->Length;
 	int temp = 0;
-	if (lastPos == -1 || label2->Text[len - 1] != ')')	//¨S¦³¬A¸¹
+	if (lastPos == -1 || label2->Text[len - 1] != ')')	//æ²’æœ‰æ‹¬è™Ÿ
 		label2->Text += "cot(" + textBox1->Text + ")";
-	else {			//§âcot´¡¤J¥ª¬A¸¹¥ªÃä
+	else {			//æŠŠcotæ’å…¥å·¦æ‹¬è™Ÿå·¦é‚Š
 		for (int i = (len - 1); i >= 0; i--) {
 			if (label2->Text[i] == ')')
 				temp++;
@@ -1757,9 +1966,9 @@ private: System::Void button43_Click(System::Object^  sender, System::EventArgs^
 	int lastPos = label2->Text->LastIndexOf(")");
 	int len = label2->Text->Length;
 	int temp = 0;
-	if (lastPos == -1 || label2->Text[len - 1] != ')')	//¨S¦³¬A¸¹
+	if (lastPos == -1 || label2->Text[len - 1] != ')')	//æ²’æœ‰æ‹¬è™Ÿ
 		label2->Text += "ln(" + textBox1->Text + ")";
-	else {			//§âln´¡¤J¥ª¬A¸¹¥ªÃä
+	else {			//æŠŠlnæ’å…¥å·¦æ‹¬è™Ÿå·¦é‚Š
 		for (int i = (len - 1); i >= 0; i--) {
 			if (label2->Text[i] == ')')
 				temp++;
@@ -1788,9 +1997,9 @@ private: System::Void button42_Click(System::Object^  sender, System::EventArgs^
 	int lastPos = label2->Text->LastIndexOf(")");
 	int len = label2->Text->Length;
 	int temp = 0;
-	if (lastPos == -1 || label2->Text[len - 1] != ')')	//¨S¦³¬A¸¹
+	if (lastPos == -1 || label2->Text[len - 1] != ')')	//æ²’æœ‰æ‹¬è™Ÿ
 		label2->Text += "exp(" + textBox1->Text + ")";
-	else {			//§âexp´¡¤J¥ª¬A¸¹¥ªÃä
+	else {			//æŠŠexpæ’å…¥å·¦æ‹¬è™Ÿå·¦é‚Š
 		for (int i = (len - 1); i >= 0; i--) {
 			if (label2->Text[i] == ')')
 				temp++;
@@ -1814,14 +2023,14 @@ private: System::Void button42_Click(System::Object^  sender, System::EventArgs^
 	operation_press = 0;
 	equal = 0;
 }
-//­Ë¼Æ
+//å€’æ•¸
 private: System::Void button41_Click(System::Object^  sender, System::EventArgs^  e) {
 	int lastPos = label2->Text->LastIndexOf(")");
 	int len = label2->Text->Length;
 	int temp = 0;
-	if (lastPos == -1 || label2->Text[len - 1] != ')')	//¨S¦³¬A¸¹
+	if (lastPos == -1 || label2->Text[len - 1] != ')')	//æ²’æœ‰æ‹¬è™Ÿ
 		label2->Text += "1/(" + textBox1->Text + ")";
-	else {			//§â1/(´¡¤J¥ª¬A¸¹¥ªÃä
+	else {			//æŠŠ1/(æ’å…¥å·¦æ‹¬è™Ÿå·¦é‚Š
 		for (int i = (len - 1); i >= 0; i--) {
 			if (label2->Text[i] == ')')
 				temp++;
@@ -1844,6 +2053,66 @@ private: System::Void button41_Click(System::Object^  sender, System::EventArgs^
 	textBox1->Text = "";
 	operation_press = 0;
 	equal = 0;
+}
+private: System::Void button46_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (textBox1->Text != "") {
+		label3->Text = textBox1->Text + "\r\n" + label3->Text;
+		operation_press = 1;
+	}
+}
+private: System::Void button47_Click(System::Object^  sender, System::EventArgs^  e) {
+	label3->Visible = !label3->Visible;
+}
+private: System::Void button36_Click(System::Object^  sender, System::EventArgs^  e) {
+	label3->Text = "";
+	operation_press = 1;
+}
+private: System::Void button37_Click(System::Object^  sender, System::EventArgs^  e) {
+	array<String^>^ tempstr;
+	tempstr = label3->Text->Split('\r');
+	textBox1->Text = tempstr[0];
+	operation_press = 1;
+}
+private: System::Void button44_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (textBox1->Text != "" && label3->Text != "") {
+		int x, y;
+		array<String^>^ tempstr;
+		tempstr = label3->Text->Split('\r');
+		x = Int32::Parse(textBox1->Text);
+		y = Int32::Parse(tempstr[0]);
+		x += y;
+		label3->Text = label3->Text->Remove(0, tempstr[0]->Length);
+		label3->Text = System::Convert::ToString(x) + label3->Text;
+	}
+	operation_press = 1;
+}
+private: System::Void button45_Click(System::Object^  sender, System::EventArgs^  e) {
+	if (textBox1->Text != "" && label3->Text != "") {
+		int x, y;
+		array<String^>^ tempstr;
+		tempstr = label3->Text->Split('\r');
+		x = Int32::Parse(textBox1->Text);
+		y = Int32::Parse(tempstr[0]);
+		x -= y;
+		label3->Text = label3->Text->Remove(0, tempstr[0]->Length);
+		label3->Text = System::Convert::ToString(x) + label3->Text;
+	}
+	operation_press = 1;
+}
+private: System::Void è¼¸å…¥å¼è¨ˆç®—æ©ŸToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	MyForm2^ f3 = gcnew MyForm2();
+	f3->ShowDialog();
+}
+private: System::Void button49_Click(System::Object^  sender, System::EventArgs^  e) {
+	textBox2->Visible = !textBox2->Visible;
+}
+private: System::Void ä½¿ç”¨èªªæ˜ToolStripMenuItem_Click(System::Object^  sender, System::EventArgs^  e) {
+	MessageBox::Show("æ­¡è¿ä½¿ç”¨ç­ åº­çš„å°å°è¨ˆç®—æ©Ÿ : )\n\næ­¤è¨ˆç®—æ©Ÿæœ‰ä¸‰ç¨®æ¨¡å¼: (2è·Ÿ3ç”¨ã€Œåˆ‡æ›æ¨¡å¼ã€é–‹å•Ÿ)\n" + 
+		"    1. ä¸€èˆ¬è¨ˆç®—æ©Ÿï¼Œç”¨æ»‘é¼ é»æ“Šè¨ˆç®—æ©Ÿä¸Šçš„æŒ‰éˆ•ï¼ŒæŒ‰ä¸‹ç­‰è™Ÿæ™‚æœƒå‡ºç¾ç­”æ¡ˆï¼Œå‘ä¸Šç®­é ­å¯ä»¥æ›é ï¼Œ" +
+		"æœ‰å„å¼MæŒ‡ä»¤(æš«å­˜åŠŸèƒ½)ï¼Œæ­·å²ç´€éŒ„å¯ä»¥æŸ¥çœ‹éå»ç®—å¼ã€‚ä½¿ç”¨sin, cosç­‰æŒ‡ä»¤æŒ‰éˆ•æ™‚ï¼Œå…ˆæŒ‰æ•¸å­—å†æŒ‰æŒ‡ä»¤ã€‚\n"+
+		"    2. è®€æª”è¨ˆç®—æ©Ÿï¼Œè®€å…¥æ–‡å­—æª”ï¼Œæ ¹æ“šå„è¡Œç®—å¼è¼¸å‡ºè§£ç­”ã€‚\n"+
+		"    3. è¼¸å…¥å¼è¨ˆç®—æ©Ÿï¼Œå¯åœ¨ä¸Šæ–¹ç©ºæ ¼è¼¸å…¥æ•¸å­¸å¼(ä¸éœ€è¦ç­‰è™Ÿ)ï¼Œå¯ä¸€æ¬¡è¼¸å…¥å¤šè¡Œï¼ŒæŒ‰ä¸‹æŒ‰éˆ•å¾Œæœƒè‡ªå‹•ç®—å‡ºæ‰€æœ‰è§£ç­”ã€‚\n"+
+		"\nç¥ä½ ä½¿ç”¨é †åˆ©~");
 }
 };
 }
