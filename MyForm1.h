@@ -12,7 +12,7 @@ namespace wp_calculator_4105056005 {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// MyForm1 ªººK­n
+	/// MyForm1 çš„æ‘˜è¦
 	/// </summary>
 	public ref class MyForm1 : public System::Windows::Forms::Form
 	{
@@ -21,13 +21,13 @@ namespace wp_calculator_4105056005 {
 		{
 			InitializeComponent();
 			//
-			//TODO:  ¦b¦¹¥[¤J«Øºc¨ç¦¡µ{¦¡½X
+			//TODO:  åœ¨æ­¤åŠ å…¥å»ºæ§‹å‡½å¼ç¨‹å¼ç¢¼
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// ²M°£¥ô¦ó¨Ï¥Î¤¤ªº¸ê·½¡C
+		/// æ¸…é™¤ä»»ä½•ä½¿ç”¨ä¸­çš„è³‡æºã€‚
 		/// </summary>
 		~MyForm1()
 		{
@@ -47,14 +47,14 @@ namespace wp_calculator_4105056005 {
 
 	private:
 		/// <summary>
-		/// ³]­p¤u¨ã©Ò»İªºÅÜ¼Æ¡C
+		/// è¨­è¨ˆå·¥å…·æ‰€éœ€çš„è®Šæ•¸ã€‚
 		/// </summary>
 		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
-		/// ¦¹¬°³]­p¤u¨ã¤ä´©©Ò»İªº¤èªk - ½Ğ¤Å¨Ï¥Îµ{¦¡½X½s¿è¾¹­×§ï
-		/// ³o­Ó¤èªkªº¤º®e¡C
+		/// æ­¤ç‚ºè¨­è¨ˆå·¥å…·æ”¯æ´æ‰€éœ€çš„æ–¹æ³• - è«‹å‹¿ä½¿ç”¨ç¨‹å¼ç¢¼ç·¨è¼¯å™¨ä¿®æ”¹
+		/// é€™å€‹æ–¹æ³•çš„å…§å®¹ã€‚
 		/// </summary>
 		void InitializeComponent(void)
 		{
@@ -72,14 +72,14 @@ namespace wp_calculator_4105056005 {
 			this->button1->BackColor = System::Drawing::Color::Gainsboro;
 			this->button1->Cursor = System::Windows::Forms::Cursors::Arrow;
 			this->button1->FlatStyle = System::Windows::Forms::FlatStyle::Flat;
-			this->button1->Font = (gcnew System::Drawing::Font(L"·s²Ó©úÅé", 10.125F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button1->Font = (gcnew System::Drawing::Font(L"æ–°ç´°æ˜é«”", 10.125F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(136)));
 			this->button1->ForeColor = System::Drawing::SystemColors::ActiveCaptionText;
 			this->button1->Location = System::Drawing::Point(586, 133);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(147, 47);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"¶}±ÒÂÂÀÉ";
+			this->button1->Text = L"é–‹å•ŸèˆŠæª”";
 			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm1::button1_Click);
 			// 
@@ -148,7 +148,7 @@ namespace wp_calculator_4105056005 {
 			this->DoubleBuffered = true;
 			this->Name = L"MyForm1";
 			this->ShowIcon = false;
-			this->Text = L"ÅªÀÉ­pºâ¾÷";
+			this->Text = L"è®€æª”è¨ˆç®—æ©Ÿ";
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -164,20 +164,20 @@ namespace wp_calculator_4105056005 {
 			String^ str;
 			double temp = 0;
 			while ((str = din->ReadLine()) != nullptr){
-				str = str->Replace(" ", str->Empty);	//§R°£ªÅ¥Õ
 				check_error = 0;
 				textBox1->Text += str + "\r\n \t = ";
+				str = str->Replace(" ", str->Empty);	//åˆªé™¤ç©ºç™½
 				str = str + "=";
 				temp = expr(str);
 				if (check_error == 0)
 					textBox1->Text += temp + "\r\n";
 				else
-					textBox1->Text += " ¿ù»~¿é¤J\r\n";
+					textBox1->Text += " éŒ¯èª¤è¼¸å…¥\r\n";
 			}
 		}
 	}
 
-	//¹Bºâ:expr
+	//é‹ç®—:expr
 	private: System::Double expr(String^ str) {
 		double value = 0.0;
 		int index = 0;
@@ -198,11 +198,12 @@ namespace wp_calculator_4105056005 {
 					value -= term(str, index);
 				break;
 			default:
+				check_error = 1;
 				return 0;
 			}
 		}
 	}
-	//¹Bºâ:term
+	//é‹ç®—:term
 	private: System::Double term(String^ str, int& index) {
 		Double value = 0.0;
 		value = number(str, index);
@@ -234,6 +235,12 @@ namespace wp_calculator_4105056005 {
 				else
 					value = pow(value, number(str, ++index));
 			}
+			else if (str[index] == '%') {
+				index++;
+				if (str[index] == '-')
+					index++;
+				value = fmod(value, number(str, index));
+			}
 			else if (str[index] == 'm' && str[index + 1] == 'o' && str[index + 2] == 'd') {
 				index += 3;
 				if (str[index] == '-')
@@ -245,7 +252,7 @@ namespace wp_calculator_4105056005 {
 		}
 		return value;
 	}
-	//¹Bºâ:number
+	//é‹ç®—:number
 	private: System::Double number(String^ str, int& index) {
 		Double value = 0.0;
 		int startnum = 0;
@@ -274,6 +281,54 @@ namespace wp_calculator_4105056005 {
 			}
 			return value;
 		}
+		else if (str[index] == '[') {
+			String^ psubstr = nullptr;
+			startnum += 100;
+			psubstr = extract(str, ++index, startnum);
+			if (psubstr == nullptr) {
+				index--;
+				check_error = true;
+				return 0;
+			}
+			value = expr(psubstr);
+			if (str[index] == '!') {
+				index++;
+				value = factorial(value);
+				if (str[index] == '+' && str[index + 1] == '+') {
+					value++;
+					index += 2;
+				}
+				else if (str[index] == '-' && str[index + 1] == '-') {
+					value--;
+					index += 2;
+				}
+			}
+			return value;
+		}
+		if (str[index] == '{') {
+			String^ psubstr = nullptr;
+			startnum += 10000;
+			psubstr = extract(str, ++index, startnum);
+			if (psubstr == nullptr) {
+				index--;
+				check_error = true;
+				return 0;
+			}
+			value = expr(psubstr);
+			if (str[index] == '!') {
+				index++;
+				value = factorial(value);
+				if (str[index] == '+' && str[index + 1] == '+') {
+					value++;
+					index += 2;
+				}
+				else if (str[index] == '-' && str[index + 1] == '-') {
+					value--;
+					index += 2;
+				}
+			}
+			return value;
+		}
 		//sin & sec & sqrt
 		if (str[index] == 's') {
 			if (str[index + 1] == 'i' && str[index + 2] == 'n' && str[index + 3] == '(') {
@@ -281,6 +336,11 @@ namespace wp_calculator_4105056005 {
 				(index) += 4;
 				startnum += 1;
 				psubstr = extract(str, index, startnum);
+				if (psubstr == nullptr) {
+					index--;
+					check_error = true;
+					return 0;
+				}
 				value = expr(psubstr);
 				value = sin(value);
 				return value;
@@ -290,6 +350,11 @@ namespace wp_calculator_4105056005 {
 				index += 4; 
 				startnum += 1;
 				psubstr = extract(str, index, startnum);
+				if (psubstr == nullptr) {
+					index--;
+					check_error = true;
+					return 0;
+				}
 				value = expr(psubstr);
 				value = 1 / cos(value);
 				return value;
@@ -299,6 +364,11 @@ namespace wp_calculator_4105056005 {
 				index += 5;
 				startnum += 1;
 				psubstr = extract(str, index, startnum);
+				if (psubstr == nullptr) {
+					index--;
+					check_error = true;
+					return 0;
+				}
 				value = expr(psubstr);
 				value = sqrt(value);
 				return value;
@@ -311,6 +381,11 @@ namespace wp_calculator_4105056005 {
 				index += 4;
 				startnum += 1;
 				psubstr = extract(str, index, startnum);
+				if (psubstr == nullptr) {
+					index--;
+					check_error = true;
+					return 0;
+				}
 				value = expr(psubstr);
 				value = cos(value);
 				return value;
@@ -320,6 +395,11 @@ namespace wp_calculator_4105056005 {
 				index += 4;
 				startnum += 1;
 				psubstr = extract(str, index, startnum);
+				if (psubstr == nullptr) {
+					index--;
+					check_error = true;
+					return 0;
+				}
 				value = expr(psubstr);
 				value = 1 / tan(value);
 				return value;
@@ -329,6 +409,11 @@ namespace wp_calculator_4105056005 {
 				index += 4;
 				startnum += 1;
 				psubstr = extract(str, index, startnum);
+				if (psubstr == nullptr) {
+					index--;
+					check_error = true;
+					return 0;
+				}
 				value = expr(psubstr);
 				value = 1 / sin(value);
 				return value;
@@ -340,16 +425,26 @@ namespace wp_calculator_4105056005 {
 			index += 4;
 			startnum += 1;
 			psubstr = extract(str, index, startnum);
+			if (psubstr == nullptr) {
+				index--;
+				check_error = true;
+				return 0;
+			}
 			value = expr(psubstr);
 			value = tan(value);
 			return value;
 		}
-		//exp«ü¼Æ
+		//expæŒ‡æ•¸
 		else if (str[index] == 'e' && str[index + 1] == 'x' && str[index + 2] == 'p' && str[index + 3] == '(') {
 			String^ psubstr = nullptr;
 			index += 4;
 			startnum += 1;
 			psubstr = extract(str, index, startnum);
+			if (psubstr == nullptr) {
+				index--;
+				check_error = true;
+				return 0;
+			}
 			value = expr(psubstr);
 			value = exp(value);
 			return value;
@@ -360,6 +455,11 @@ namespace wp_calculator_4105056005 {
 			index += 4;
 			startnum += 1;
 			psubstr = extract(str, index, startnum);
+			if (psubstr == nullptr) {
+				index--;
+				check_error = true;
+				return 0;
+			}
 			value = expr(psubstr);
 			value = log10(value);
 			return value;
@@ -370,16 +470,26 @@ namespace wp_calculator_4105056005 {
 			index += 3;
 			startnum += 1;
 			psubstr = extract(str, index, startnum);
+			if (psubstr == nullptr) {
+				index--;
+				check_error = true;
+				return 0;
+			}
 			value = expr(psubstr);
 			value = log(value);
 			return value;
 		}
-		//neg­t¸¹
+		//negè² è™Ÿ
 		else if (str[index] == 'n' && str[index + 1] == 'e' && str[index + 2] == 'g' && str[index + 3] == '(') {
 			String^ psubstr = nullptr;
 			index += 4;
 			startnum += 1;
 			psubstr = extract(str, index, startnum);
+			if (psubstr == nullptr) {
+				index--;
+				check_error = true;
+				return 0;
+			}
 			value = expr(psubstr);
 			value = -(value);
 			return value;
@@ -407,6 +517,14 @@ namespace wp_calculator_4105056005 {
 					index += 2;
 				}
 			}
+			if (str[index] == '+' && str[index + 1] == '+') {
+				value++;
+				index += 2;
+			}
+			else if (str[index] == '-' && str[index + 1] == '-') {
+				value--;
+				index += 2;
+			}
 			return value;
 		}
 
@@ -416,9 +534,17 @@ namespace wp_calculator_4105056005 {
 			factor *= 0.1;
 			value = value + (str[index] - '0')*factor;
 		}
+		if (str[index] == '+' && str[index + 1] == '+') {
+			value++;
+			index += 2;
+		}
+		else if (str[index] == '-' && str[index + 1] == '-') {
+			value--;
+			index += 2;
+		}
 		return value;
 	}
-	//¹Bºâ:extract
+	//é‹ç®—:extract
 	private: System::String^ extract(String^ str, int& index, int numL) {
 		char buffer[80] = {'0'};
 		String^ pstr;
